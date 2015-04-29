@@ -5033,9 +5033,6 @@ h4 [class^="icon-"],
 h5 [class^="icon-"],
 h6 [class^="icon-"] {
   color: #40c2f3;
-  font-size: 1.5em;
-  vertical-align: middle;
-  margin-right: 5px;
 }
 a[rel="popover"] {
   cursor: pointer;
