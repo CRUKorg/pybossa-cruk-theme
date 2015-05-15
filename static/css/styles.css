@@ -4973,6 +4973,9 @@ body,
 html {
   background-color: #FFFFFF;
 }
+.navbar-fixed-top .navbar-inner {
+  background-color: #a7a8aa;
+}
 body > footer {
   border-top: none;
 }

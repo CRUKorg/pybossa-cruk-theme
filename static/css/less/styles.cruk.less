@@ -4,7 +4,6 @@
         bootstrap/variables.less file
 */
 @import "bootstrap/bootstrap";
-
 /*
     Then import the original PyBossa styles script
 */
@@ -19,14 +18,19 @@ body, html {
     background-color: #FFFFFF;
 }
 
-body > footer {
-	border-top: none;
+.navbar-fixed-top {
+    .navbar-inner {
+        background-color: #a7a8aa;
+    }
 }
 
+body > footer {
+    border-top: none;
+}
 
 h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-"], h5 [class^="icon-"], h6 [class^="icon-"] {
-	color: @primary;
-	font-size:1.5em;
-	vertical-align:middle;
-	margin-right:20px;
+    color: @primary;
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 20px;
 }
