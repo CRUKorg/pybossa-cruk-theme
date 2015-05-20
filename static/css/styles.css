@@ -4655,71 +4655,6 @@ body {
 
   font-size: 13px;
 }
-.navbar-fixed-top .navbar-inner,
-.navbar-inner {
-  background: #DDD;
-  filter: none;
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  color: #FFF;
-  font-size: 14px;
-}
-.navbar .brand {
-  padding: 20px 20px 0px 0px;
-  margin: 0px;
-  color: #FFF;
-  text-shadow: none;
-}
-.navbar .nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 20px 3px 20px 0px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  color: #FFF;
-  text-shadow: none;
-}
-.navbar .nav > li > a:hover {
-  background-color: #70d1f6;
-  color: #FFF;
-}
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
-  background-color: #88d9f8;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  color: #FFF;
-}
-.navbar .nav li.dropdown > .dropdown-toggle .caret {
-  border-bottom-color: #FFF;
-  border-top-color: #FFF;
-}
-.navbar .nav > li > a .icon {
-  font-size: 22px;
-  vertical-align: top;
-}
-.navbar .btn-navbar {
-  background-color: #40c2f3;
-  background-image: none;
-  filter: none;
-  border-color: #0c8fc1 #0c8fc1 #10b3f0;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-}
-.navbar .btn-navbar:hover,
-.navbar .btn-navbar:active,
-.navbar .btn-navbar.active,
-.navbar .btn-navbar.disabled,
-.navbar .btn-navbar[disabled] {
-  background-color: #70d1f6;
-}
-.navbar .btn-navbar .icon-bar {
-  background-color: #10b3f0;
-}
 .banner {
   background-color: #f7f7f7;
   position: relative;
@@ -4898,19 +4833,6 @@ ul.users li a {
   body {
     padding-top: 0px;
   }
-  .navbar .container {
-    width: 724px !important;
-  }
-  .navbar .brand {
-    padding: 0px;
-  }
-  .navbar .brand img {
-    max-height: 40px;
-  }
-  .navbar .nav > li > a {
-    margin-top: 5px;
-    margin-bottom: 0px;
-  }
   .banner {
     padding: 0px;
     margin-left: 0px;
@@ -4935,13 +4857,6 @@ ul.users li a {
   }
 }
 @media (max-width: 767px) {
-  .navbar .container {
-    width: auto !important;
-  }
-  .navbar-inner {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
   .banner .featured {
     display: none;
   }
@@ -4975,6 +4890,9 @@ html {
 }
 .navbar-fixed-top .navbar-inner {
   background-color: #a7a8aa;
+}
+.navbar-fixed-top .navbar-inner .brand {
+  padding: 7px 20px;
 }
 body > footer {
   border-top: none;
