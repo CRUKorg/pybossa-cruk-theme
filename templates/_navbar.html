@@ -16,9 +16,6 @@
                     {#              <li {% if active_page == 'projects' %} class="active" {% endif %}><a href="{{ url_for('project.index') }}">{{ _('Projects') }}</a></li>#}
                     {#              <li {% if active_page == 'create' %} class="active" {% endif %}><a href="{{ url_for('project.new') }}">{{ _('Create') }}</a></li>#}
                     {#              <li {% if active_page == 'about' %} class="active" {% endif %}><a href="{{ url_for('home.about')}}">{{ _('About') }}</a></li>#}
-                    <li>
-                        <a href="http://citscitools.cancerresearchuk.org/community/" title="{{ _("View the community home page") }}">{{ _("Community") }}</a>
-                    </li>
                     {% if current_user.is_anonymous() %}
                         <li {% if request.path == url_for('account.signin') %}class="active"{% endif %}>
                             <a href="{{ url_for('account.signin') }}">
@@ -29,6 +26,9 @@
                     {% if current_user.is_authenticated() %}
                         <li {% if active_page == 'projects' %} class="active" {% endif %}><a href="{{ url_for('project.index') }}">{{ _('Contribute') }}</a></li>
                     {% endif %}
+                    <li>
+                        <a href="http://citscitools.cancerresearchuk.org/community/" title="{{ _("View the community home page") }}">{{ _("Community") }}</a>
+                    </li>
                 </ul>
                 {% include '_gcs_form.html' ignore missing %}
                 {% if current_user.is_authenticated() %}

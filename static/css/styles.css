@@ -4650,9 +4650,6 @@ html {
   overflow-x: hidden;
 }
 body {
-  padding-top: 100px;
-  /* Allow for Header */
-
   font-size: 13px;
 }
 .banner {
@@ -4830,9 +4827,6 @@ ul.users li a {
 /* Media Queries */
 /* ============= */
 @media (max-width: 979px) {
-  body {
-    padding-top: 0px;
-  }
   .banner {
     padding: 0px;
     margin-left: 0px;
@@ -4887,6 +4881,9 @@ ul.users li a {
 body,
 html {
   background-color: #FFFFFF;
+}
+body {
+  padding-top: 50px;
 }
 .navbar-fixed-top .navbar-inner {
   background-color: #a7a8aa;
