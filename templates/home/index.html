@@ -4,24 +4,18 @@
 
 {% block content %}
 {% if current_user.is_anonymous() %}
-    <div class="row">
+    <div class="row" id="homepage-welcome-message">
         <div class="span5">
             <img src="{{ url_for('static', filename='img/cruk/cruk-citsci-hero-large.png') }}" />
         </div>
         <div class="span7">
-            <h1>{{ _("Citizen Science at Cancer Research UK") }}</h1>
-            <p>{{ _("Welcome to the Cancer Research UK Citizen Science platform.") }}</p>
-            <div class="media alert alert-info">
-                <i class="icon-info-sign icon-5x media-object pull-left"></i>
-                <div class="media-body">
-                    <h5 class="media-heading">
-                        {{ _("Please note that registration is currently by invitation only.") }}
-                    </h5>
-                    <p>
-                        {{ _("If you are interested in contributing to the Citizen Science project at CRUK please email EMAIL-TBC") }}
-                    </p>
-                </div>
-            </div>
+            <h1>{{ _("Welcome to the Citizen Science pioneer platform.") }}</h1>
+            <p>{{ _("You're here because you want to develop the next generation of research-accelerating apps and games, to allow the public to join forces with CRUK scientists and beat cancer sooner.") }}</p>
+            <p>{{ _("In due course, you'll be invited to take part in testing, and provide invaluable information that will guide product development and eventually shape future projects.") }}</p>
+            <p>{{ _("Until then, please get involved with our community area and see how we're finding new ways to bring forward the day when all cancers are cured.") }}</p>
+            <p>
+                <a href="/community" class="btn btn-primary">{{ _("Enter the community") }} <i class="icon-arrow-right"></i> </a>
+            </p>
         </div>
     </div>
 {% else %}

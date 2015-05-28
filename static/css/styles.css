@@ -4885,6 +4885,15 @@ html {
 body {
   padding-top: 50px;
 }
+body #homepage-welcome-message {
+  margin-top: 30px;
+}
+body #homepage-welcome-message h1 {
+  margin-bottom: 20px;
+}
+body #homepage-welcome-message p {
+  margin-bottom: 20px;
+}
 .navbar-fixed-top .navbar-inner {
   background-color: #a7a8aa;
 }
