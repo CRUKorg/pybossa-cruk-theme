@@ -50,6 +50,11 @@
 
                 <div class="projects">
                     {% for project in projects %}
+                        {#
+                            Note that this additional filtering of the projects collectio needs to be done at the page
+                            level, not here. but this will do for the first MVP (MG)
+                            TODO: Refactor this filtering of the projects collection to page level
+                        #}
                         {% if current_user.admin == 1 or project.short_name in current_user.info.get("groups", []) %}
                             {{ helper.show_project(project, active_cat.short_name, current_user, upload_method) }}
                         {% endif %}
