@@ -19,7 +19,7 @@
                 This variable is passed from the CMS platform to this template and then on to the back end
                 to enable user grouping per mvp version.
             #}
-            <input type="hidden" name='request_json' value="{{ request.get_json() }}" />
+            <input type="hidden" name='request_json' value="{{ request.query_string }}" />
 
             {{ render_field(form.fullname, placeholder= _('my full name')) }}
             {{ render_field(form.name, placeholder= _('myusername')) }}
