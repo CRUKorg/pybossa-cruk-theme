@@ -51,7 +51,9 @@
 
                 <div class="projects">
                     {% for project in projects %}
-                        {{ helper.show_project(project, active_cat.short_name, current_user, upload_method) }}
+                        {% if current_user.admin == 1 or project.short_name in current_user.info.get("groups", []) %}
+                            {{ helper.show_project(project, active_cat.short_name, current_user, upload_method) }}
+                        {% endif %}
                     {% endfor %}
                 </div>
                 {% if pagination.pages > 1 %}
