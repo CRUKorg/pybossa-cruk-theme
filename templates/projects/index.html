@@ -1,7 +1,13 @@
 {% extends "/base.html" %}
 {% set active_page = "projects" %}
-
 {% import "projects/_helpers.html" as helper %}
+{%
+    filtered_projects = []
+    for p in projects:
+        if current_user.admin == 1 or project.short_name in current_user.info.get("groups", []):
+            filtered_projects.append(project)
+    projects = filtered_projects
+%}
 
 {% block content %}
     <script src="{{ url_for('static', filename='js/vendor/isotope.pkgd.min.js') }}"></script>
@@ -51,9 +57,9 @@
 
                 <div class="projects">
                     {% for project in projects %}
-                        {% if current_user.admin == 1 or project.short_name in current_user.info.get("groups", []) %}
+{#                        {% if current_user.admin == 1 or project.short_name in current_user.info.get("groups", []) %}#}
                             {{ helper.show_project(project, active_cat.short_name, current_user, upload_method) }}
-                        {% endif %}
+{#                        {% endif %}#}
                     {% endfor %}
                 </div>
                 {% if pagination.pages > 1 %}
