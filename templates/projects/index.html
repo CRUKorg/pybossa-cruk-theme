@@ -100,9 +100,9 @@
                 }
             });
 
-            console.log($.cookie('mvp-01tutorial'));
-            $.cookie('mvp-01tutorial', '');
-            console.log($.cookie('mvp-01tutorial'));
+            $("#remove-cookie").on("click", function(){
+                $.cookie('mvp-01tutorial', '');
+            });
 
             // change is-checked class on buttons
             $('.dropdown-toggle').each(function (i, buttonGroup) {

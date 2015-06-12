@@ -170,9 +170,15 @@
                 {% endif %}
                 {% if active_cat != "draft" %}
                     <p style="margin:0">
-                        <a class="btn btn-primary" href="{{ url_for('project.presenter', short_name = project.short_name) }}"><i class="icon icon-white icon-ok"></i> {{ _('Try it!') }}
-                        </a></p>
-                    <a class="btn btn-primary" id="remove-cookie" href="{{ url_for('project.presenter', short_name = project.short_name) }}"><i class="icon icon-white icon-ok"></i> {{ _('Try it!') }}
+                        <a class="btn btn-primary"
+                           href="{{ url_for('project.presenter', short_name = project.short_name) }}">
+                            <i class="icon icon-white icon-ok"></i> {{ _('Try it!') }}
+                        </a>
+                        <a class="btn btn-primary" id="remove-cookie">
+                            <i class="icon icon-white icon-ok"></i> {{ _('Remove MVP Cookie!') }}
+                        </a>
+                    </p>
+
                 {% endif %}
             </div>
             <!-- end of id=data class=span8 -->
