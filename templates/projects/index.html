@@ -101,8 +101,11 @@
             });
 
             $("#remove-cookie").on("click", function(){
-                console.log($.cookie('mvp-01tutorial', ''));
+                console.log($.cookie('mvp-01tutorial'));
+                console.log($.cookie('pybossa-proj-templatetutorial'));
                 $.cookie('mvp-01tutorial', '');
+                $.cookie('pybossa-proj-templatetutorial', '');
+
             });
 
             // change is-checked class on buttons
