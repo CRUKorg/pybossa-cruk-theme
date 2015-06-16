@@ -72,49 +72,44 @@
     </div>
     {{ helper.broken_image() }}
     <script>
-        $(function () {
-            // init Isotope
-            var $container = $('.projects').isotope({
-                itemSelector: '.project-item',
-                layoutMode: 'fitRows',
-                getSortData: {
-                    date: '.date',
-                    activity: '.activity',
-                    progress: '.progress parseInt',
-                },
-                sortAscending: {
-                    progress: false,
-                    activity: false,
-                }
-            });
-
-            // bind sort button click
-            $('#sorts').on('click', 'a', function () {
-                var sortValue = $(this).attr('data-sort-value');
-                $container.isotope({sortBy: sortValue});
-                if (sortValue == 'original-order') {
-                    $("#order").text('name');
-                }
-                else {
-                    $("#order").text(sortValue);
-                }
-            });
-
-            $("#remove-cookie").on("click", function () {
-                $.removeCookie('mvp-01tutorial', {path: "/"});
-            });
+        $(function() {
+    // init Isotope
+    var $container = $('.projects').isotope({
+        itemSelector: '.project-item',
+        layoutMode: 'fitRows',
+        getSortData: {
+            date: '.date',
+            activity: '.activity',
+            progress: '.progress parseInt',
+        },
+        sortAscending: {
+            progress: false,
+            activity: false,
+        }
+    });
+    // bind sort button click
+    $('#sorts').on('click', 'a', function() {
+        var sortValue = $(this).attr('data-sort-value');
+        $container.isotope({
+            sortBy: sortValue
         });
-
-        // change is-checked class on buttons
-        $('.dropdown-toggle').each(function (i, buttonGroup) {
-            var $buttonGroup = $(buttonGroup);
-            $buttonGroup.on('click', 'button', function () {
-                $buttonGroup.find('.is-checked').removeClass('is-checked');
-                $(this).addClass('is-checked');
-            });
+        if (sortValue == 'original-order') {
+            $("#order").text('name');
+        } else {
+            $("#order").text(sortValue);
+        }
+    });
+    $("#remove-cookie").on("click", function() {
+         $.removeCookie('mvp-01tutorial', { path: "/" } );
+    });
+    // change is-checked class on buttons
+    $('.dropdown-toggle').each(function(i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.on('click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $(this).addClass('is-checked');
         });
-
-        })
-        ;
+    });
+});
     </script>
 {% endblock %}
