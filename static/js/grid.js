@@ -151,8 +151,8 @@ Grid.prototype.loop = function () {
     }
 
     // Center the zoom cursor to middle of square
-    target_pos.x = target_pos.x + 30
-    target_pos.y = target_pos.y + 30
+    target_pos.x = target_pos.x
+    target_pos.y = target_pos.y
 
     // Find the closet grid item
     $.each(this.grid, function (key, value) {
@@ -220,6 +220,5 @@ Grid.prototype.next_slide = function () {
         _this.task["answer"].push(obj);
     });
 
-    console.log(this.task);
 
 }
