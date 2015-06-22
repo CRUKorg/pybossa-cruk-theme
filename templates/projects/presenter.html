@@ -18,7 +18,24 @@
         <script src="{{ url_for('static', filename="js/vendor/raphael-min.js") }}" type="text/javascript"></script>
         <script src="{{ url_for('static', filename="js/vendor/device.js") }}" type="text/javascript"></script>
         <script type="text/javascript" async="async">
-        alert("dsd");
+            console.log("device.portrait() === %s", device.portrait());
+      console.log("device.landscape() === %s", device.landscape());
+      console.log("device.mobile() === %s", device.mobile());
+      console.log("device.tablet() === %s", device.tablet());
+      console.log("device.ipad() === %s", device.ipad());
+      console.log("device.ipod() === %s", device.ipod());
+      console.log("device.iphone() === %s", device.iphone());
+      console.log("device.android() === %s", device.android());
+      console.log("device.androidTablet() === %s", device.androidTablet());
+      console.log("device.blackberryTablet() === %s", device.blackberryTablet());
+      console.log("device.fxos() === %s", device.fxos());
+      console.log("device.fxosPhone() === %s", device.fxosPhone());
+      console.log("device.fxosTablet() === %s", device.fxosTablet());
+
+      var devicejs = device.noConflict();
+
+      console.log ("device.noConflict() [previous]", window.device);
+      console.log ("device.noConflict() [device.js]", devicejs.iphone());
         </script>
 
 
