@@ -37,6 +37,40 @@
       console.log ("device.noConflict() [previous]", window.device);
       console.log ("device.noConflict() [device.js]", devicejs.iphone());
         </script>
+        <style>
+            .ios,
+            .mobile,
+            .andriod,
+            .tablet,
+            .blackberry {
+
+            }
+
+            .device-message {
+{#                position: fixed;#}
+{#                top: 0;#}
+{#                bottom: 0;#}
+{#                left: 0;#}
+{#                right: 0;#}
+{#                background-color: rgba(0, 0, 0, 0.3);#}
+            }
+
+            .device-message-inner {
+                position: absolute;
+                background-color: white;
+                padding: 10px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+
+        <div class="device-message">
+            <div class="device-message-inner">
+                <h1>Please view on a desktop computer</h1>
+                <h3>We are currently working on development for other devices.</h3>
+            </div>
+        </div>
 
 
 {#        <script src="{{ url_for('static', filename="js/grid.js") }}" type="text/javascript"></script>#}
