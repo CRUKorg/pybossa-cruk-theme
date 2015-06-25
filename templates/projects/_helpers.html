@@ -142,11 +142,7 @@
 {% macro show_project(project, active_cat, current_user, upload_method) %}
     <div class="project-item row-fluid {{ class }} well">
         <h2><a href="{{ url_for('project.details', short_name = project.short_name) }}">{{ project.name }}</a></h2>
-{# {% if ( current_user.admin )  %}#}
-{#                <a href="{{ url_for('project.details', short_name = project.short_name) }}">{{ project.name }}</a>#}
-{#            {% else %}#}
-{#                <a href="http://citscitools.cancerresearchuk.org/community/mvp-01-gold-standard/">{{ project.name }}</a>#}
-{#            {% endif %}#}
+
         <div class="row-fluid">
             <div class="span3">
                 {{ render_project_thumbnail(project, upload_method, class='thumbnail', style='max-width:100px; max-height:100px;') }}
