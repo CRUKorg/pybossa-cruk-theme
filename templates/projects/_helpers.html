@@ -143,7 +143,7 @@
     <div class="project-item row-fluid {{ class }} well">
         <h2>
 
-            {% if ( current_user.admin ) { %}
+            {% if ( current_user.admin )  %}
                 <a href="{{ url_for('project.details', short_name = project.short_name) }}">{{ project.name }}</a>
             {% else %}
                 <a href="http://citscitools.cancerresearchuk.org/">{{ project.name }}</a>
