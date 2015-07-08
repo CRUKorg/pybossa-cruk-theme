@@ -26,7 +26,7 @@
                 {% for user_with_groups in users_with_groups %}
 
                     {% with user=user_with_groups.user, groups=user_with_groups.groups %}
-                        <div class="row-fluid well well-small user-list-user">
+                        <div class="row-fluid well well-small user-list-user" data-search_data="{{ user.name }} {{ user.fullname }} {% for g in groups %}{{ g }} {% endfor %}">
                             <div class="span2">
                                 {{ helper.render_user_thumbnail(user, upload_method, style="height:100px; width:100px;") }}
                             </div>
@@ -64,7 +64,7 @@
                 itemSelector: '.user-list-user',
                 layoutMode: 'vertical',
                 filter: function () {
-                    return qsRegex ? $(this).text().match(qsRegex) : true;
+                    return qsRegex ? $(this).data("search_data").match(qsRegex) : true;
                 }
             });
 
