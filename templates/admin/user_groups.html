@@ -14,21 +14,23 @@
         <div class="span9">
             <h1><strong>{{ _('Admin Site') }}:</strong> {{ _('Manage User Groups') }}</h1>
 
-            {% for user in users %}
+            {% for user_with_groups in users_with_groups %}
 
-                <div class="row-fluid well well-small">
-                    <div class="span2">
-                        {{ helper.render_user_thumbnail(user, upload_method, style="height:100px; width:100px;") }}
-                    </div>
-                    <div class="span10">
-                        <h2>{{ user.fullname }}
-                            <small>({{ _('nick') }}: {{ user.name }})</small>
-                        </h2>
-                        <h3>{{ _('Email address') }}: {{ user.email_addr }}</h3>
-                        <h3>{{ _('Member since') }}: {{ user.created[0:10] }}</h3>
-                    </div>
-                </div>
+                {% with user=user_with_groups.user, groups=user_with_groups.groups %}
+                    <div class="row-fluid well well-small">
+                        <div class="span2">
+                            {{ helper.render_user_thumbnail(user, upload_method, style="height:100px; width:100px;") }}
+                        </div>
+                        <div class="span10">
+                            <h2>{{ user.fullname }}
+                                <small>({{ _('nick') }}: {{ user.name }})</small>
+                            </h2>
+                            <h3>{{ _('Email address') }}: {{ user.email_addr }}</h3>
 
+                            <h3>{{ _('Member since') }}: {{ user.created[0:10] }}</h3>
+                        </div>
+                    </div>
+                {% endwith %}
             {% endfor %}
         </div>
     </div>
