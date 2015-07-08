@@ -31,7 +31,11 @@
                         </div>
                         <div class="span5">
                             <h3>{{ _('Groups') }}</h3>
-                            {{ groups }}
+                            {% for group in groups %}
+                                <span class="label label-info">
+                                    {{ group }}
+                                </span>
+                            {% endfor %}
                         </div>
                     </div>
                 {% endwith %}
