@@ -14,8 +14,10 @@
         <div class="span9">
             <div class="alert alert-warning media">
                 <i class="icon-warning-sign icon-4x media-object pull-left"></i>
+
                 <div class="media-body">
                     <h4 class="media-heading">In development</h4>
+
                     <p>
                         Please note that this page is under development, do not expect features listed here to work :)
                     </p>
@@ -25,10 +27,10 @@
             <h1><strong>{{ _('Admin Site') }}:</strong> {{ _('Manage User Groups') }}</h1>
             <hr/>
             <form class="form-search">
-{#                <div class="input-append">#}
+                {#                <div class="input-append">#}
                 <input type="text" class="input-large search-query quicksearch" placeholder={{ _('Try with the full name or nick') }}>
-{#                    <button type="submit" class="btn"><i class="icon-search"></i> {{ _('Search') }}</button>#}
-{#                </div>#}
+                {#                    <button type="submit" class="btn"><i class="icon-search"></i> {{ _('Search') }}</button>#}
+                {#                </div>#}
             </form>
 
 
@@ -36,7 +38,8 @@
                 {% for user_with_groups in users_with_groups %}
 
                     {% with user=user_with_groups.user, groups=user_with_groups.groups %}
-                        <div class="row-fluid well well-small user-list-user" data-search_data="{{ user.name }} {{ user.fullname }} {% for g in groups %}{{ g }} {% endfor %}">
+                        <div class="row-fluid well well-small user-list-user" data-search_data="{{ user.name }} {{ user.fullname }}
+                            {% for g in groups %}{{ g }} {% endfor %}">
                             <div class="span2">
                                 {{ helper.render_user_thumbnail(user, upload_method, style="height:100px; width:100px;") }}
                             </div>
@@ -58,8 +61,8 @@
                                 </h3>
                                 {% for group in groups %}
                                     <span class="label label-info">
-                                    {{ group }}
-                                </span>
+                                        {{ group }} <a href="Javascript:alert('In development');">&times;</a>
+                                    </span>
                                 {% endfor %}
                             </div>
                         </div>
