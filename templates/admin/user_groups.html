@@ -12,7 +12,9 @@
         </div>
         <div class="span9">
             <h1><strong>{{ _('Admin Site') }}:</strong> {{ _('Manage User Groups') }}</h1>
-
+            {% for u in users %}
+                {{ u.username }} - {{ u.info }}
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
