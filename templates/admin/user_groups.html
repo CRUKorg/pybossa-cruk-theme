@@ -21,13 +21,17 @@
                         <div class="span2">
                             {{ helper.render_user_thumbnail(user, upload_method, style="height:100px; width:100px;") }}
                         </div>
-                        <div class="span10">
+                        <div class="span5">
                             <h2>{{ user.fullname }}
                                 <small>({{ _('nick') }}: {{ user.name }})</small>
                             </h2>
                             <h3>{{ _('Email address') }}: {{ user.email_addr }}</h3>
 
                             <h3>{{ _('Member since') }}: {{ user.created[0:10] }}</h3>
+                        </div>
+                        <div class="span5">
+                            <h3>{{ _('Groups') }}</h3>
+                            {{ groups }}
                         </div>
                     </div>
                 {% endwith %}
