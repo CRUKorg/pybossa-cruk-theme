@@ -6,7 +6,7 @@
 {% from "admin/_helpers.html" import render_admin_user %}
 
 {% block content %}
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.min.js"></script>
     <div class="row">
         <div class="span3">
             {{ render_account_local_nav(current_user, active_link) }}
@@ -14,33 +14,35 @@
         <div class="span9">
             <h1><strong>{{ _('Admin Site') }}:</strong> {{ _('Manage User Groups') }}</h1>
 
-            {% for user_with_groups in users_with_groups %}
+            <div class="user-list">
+                {% for user_with_groups in users_with_groups %}
 
-                {% with user=user_with_groups.user, groups=user_with_groups.groups %}
-                    <div class="row-fluid well well-small">
-                        <div class="span2">
-                            {{ helper.render_user_thumbnail(user, upload_method, style="height:100px; width:100px;") }}
-                        </div>
-                        <div class="span5" style="border-right: 1px solid #DDD; padding-right: 5px;">
-                            <h2>
-                                {{ user.fullname }} <br/>
-                                <small>({{ _('nick') }}: {{ user.name }})</small>
-                            </h2>
-                            <h3>{{ _('Email address') }}: {{ user.email_addr }}</h3>
+                    {% with user=user_with_groups.user, groups=user_with_groups.groups %}
+                        <div class="row-fluid well well-small user-list-user">
+                            <div class="span2">
+                                {{ helper.render_user_thumbnail(user, upload_method, style="height:100px; width:100px;") }}
+                            </div>
+                            <div class="span5" style="border-right: 1px solid #DDD; padding-right: 5px;">
+                                <h2>
+                                    {{ user.fullname }} <br/>
+                                    <small>({{ _('nick') }}: {{ user.name }})</small>
+                                </h2>
+                                <h3>{{ _('Email address') }}: {{ user.email_addr }}</h3>
 
-                            <h3>{{ _('Member since') }}: {{ user.created[0:10] }}</h3>
-                        </div>
-                        <div class="span5">
-                            <h3>{{ _('Groups') }}</h3>
-                            {% for group in groups %}
-                                <span class="label label-info">
+                                <h3>{{ _('Member since') }}: {{ user.created[0:10] }}</h3>
+                            </div>
+                            <div class="span5">
+                                <h3>{{ _('Groups') }}</h3>
+                                {% for group in groups %}
+                                    <span class="label label-info">
                                     {{ group }}
                                 </span>
-                            {% endfor %}
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
-                {% endwith %}
-            {% endfor %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}
