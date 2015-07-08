@@ -40,7 +40,12 @@
                                 <h3>{{ _('Member since') }}: {{ user.created[0:10] }}</h3>
                             </div>
                             <div class="span5">
-                                <h3>{{ _('Groups') }}</h3>
+                                <h3>
+                                    <a href="Javascript:alert('In Development');" class="btn btn-primary">
+                                        <i class="icon-plus-sign"></i>
+                                    </a>
+                                    {{ _('Groups') }}
+                                </h3>
                                 {% for group in groups %}
                                     <span class="label label-info">
                                     {{ group }}
