@@ -13,6 +13,14 @@
         </div>
         <div class="span9">
             <h1><strong>{{ _('Admin Site') }}:</strong> {{ _('Manage User Groups') }}</h1>
+            <hr/>
+            <form class="form-search">
+{#                <div class="input-append">#}
+                <input type="text" class="input-large search-query quicksearch" placeholder={{ _('Try with the full name or nick') }}>
+{#                    <button type="submit" class="btn"><i class="icon-search"></i> {{ _('Search') }}</button>#}
+{#                </div>#}
+            </form>
+
 
             <div class="user-list">
                 {% for user_with_groups in users_with_groups %}
@@ -45,4 +53,43 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" language="JavaScript">
+        $(function () {
+            // quick search regex
+            var qsRegex;
+
+            // init Isotope
+            var $grid = $('.user-list').isotope({
+                itemSelector: '.user-list-user',
+                layoutMode: 'vertical',
+                filter: function () {
+                    return qsRegex ? $(this).text().match(qsRegex) : true;
+                }
+            });
+
+            // use value of search field to filter
+            var $quicksearch = $('.quicksearch').keyup(debounce(function () {
+                qsRegex = new RegExp($quicksearch.val(), 'gi');
+                $grid.isotope();
+            }, 200));
+
+        });
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce(fn, threshold) {
+            var timeout;
+            return function debounced() {
+                if (timeout) {
+                    clearTimeout(timeout);
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+
+                timeout = setTimeout(delayed, threshold || 100);
+            }
+        }
+    </script>
 {% endblock %}
