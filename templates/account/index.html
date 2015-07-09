@@ -7,6 +7,7 @@
 {% block content %}
 
 <div class="row">
+<h1>Testing theme template account/index.html</h1>
   <div class="span9 offset2">
       {% if enforce_privacy and (current_user.is_anonymous() or (current_user.is_authenticated and not current_user.admin)) %}
         {{ privacy.render_lock_page() }}
