@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% import "account/_helpers.html" as helper %}
+{% set active_page = "profile" %}
+{% set active_link = "admin" %}
+{% from "account/_helpers.html" import render_account_local_nav %}
+{% from "admin/_helpers.html" import render_admin_user %}
+
+{% block content %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.min.js"></script>
+    <div class="row">
+        <div class="span3">
+            {{ render_account_local_nav(current_user, active_link) }}
+        </div>
+        <div class="span9">
+            <div class="alert alert-warning media">
+                <i class="icon-warning-sign icon-4x media-object pull-left"></i>
+
+                <div class="media-body">
+                    <h4 class="media-heading">In development</h4>
+
+                    <p>
+                        Please note that this page is under development, do not expect features listed here to work :)
+                    </p>
+                </div>
+            </div>
+
+            <h1><strong>{{ _('Admin Site') }}:</strong> {{ _('Manage User Groups') }}</h1>
+            <hr/>
+            <form class="form-search">
+                <p>
+                    Search for a user by Name, Nickname or by group name.
+                </p>
+                <input type="text" class="input-large search-query quicksearch" placeholder={{ _('Try with the full name or nick') }}>
+            </form>
+
+
+            <div class="user-list">
+                {% for user_with_groups in users_with_groups %}
+
+                    {% with user=user_with_groups.user, groups=user_with_groups.groups %}
+                        <div class="row-fluid well well-small user-list-user" data-search_data="{{ user.name }} {{ user.fullname }}
+                            {% for g in groups %}{{ g }} {% endfor %}">
+                            <div class="span2">
+                                {{ helper.render_user_thumbnail(user, upload_method, style="height:100px; width:100px;") }}
+                            </div>
+                            <div class="span5" style="border-right: 1px solid #DDD; padding-right: 5px;">
+                                <h2>
+                                    {{ user.fullname }} <br/>
+                                    <small>({{ _('nick') }}: {{ user.name }})</small>
+                                </h2>
+                                <h3>{{ _('Email address') }}: {{ user.email_addr }}</h3>
+
+                                <h3>{{ _('Member since') }}: {{ user.created[0:10] }}</h3>
+                            </div>
+                            <div class="span5">
+                                <h3>
+                                    <a href="Javascript:alert('In Development');" class="btn btn-primary btn-small pull-right" style="position: relative; top: -5px;">
+                                        <i class="icon-plus-sign" style="color: #FFF; margin: 0;"></i>
+                                    </a>
+                                    {{ _('Groups') }}
+                                </h3>
+                                {% for group in groups %}
+                                    <span class="label label-info" style="border-radius: 3px;">
+                                        {{ group }} <a href="Javascript:alert('In development');" style="color:#FFF; border-left: 1px solid ; padding: 0 0 0 4px;"><span style="position: relative; top:-1px;">&times;</span></a>
+                                    </span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endwith %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" language="JavaScript">
+        $(function () {
+            // quick search regex
+            var qsRegex;
+
+            // init Isotope
+            var $grid = $('.user-list').isotope({
+                itemSelector: '.user-list-user',
+                layoutMode: 'vertical',
+                filter: function () {
+                    return qsRegex ? $(this).data("search_data").match(qsRegex) : true;
+                }
+            });
+
+            // use value of search field to filter
+            var $quicksearch = $('.quicksearch').keyup(debounce(function () {
+                qsRegex = new RegExp($quicksearch.val(), 'gi');
+                $grid.isotope();
+            }, 200));
+
+        });
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce(fn, threshold) {
+            var timeout;
+            return function debounced() {
+                if (timeout) {
+                    clearTimeout(timeout);
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+
+                timeout = setTimeout(delayed, threshold || 100);
+            }
+        }
+    </script>
+{% endblock %}
