@@ -46,9 +46,8 @@
                         {% if current_user.admin == 1 %}
                             <i class="icon-th"></i> {{ pagination.total_count }} {{ active_cat.name }} Projects</h1>
                         {% else %}
-                            <i class="icon-th"></i> {{ current_user.info.get("groups", "").split(",")|length }}</h1>
+                            <i class="icon-th"></i> {{ current_user.info.get("groups", "").split(",")|length }} {{ active_cat.description }}</h1>
                         {% endif %}
-                    <h2>{{ active_cat.description }}</h2>
                 {% endif %}
 
 
