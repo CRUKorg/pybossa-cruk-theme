@@ -180,7 +180,7 @@
                             href="{{ url_for('project.presenter', short_name = project.short_name) }}">
                             <i class="icon icon-white icon-ok"></i> {{ _('Try it!') }}
                         </a>
-                        {% if project.short_name != "mvp-demo" %}
+                        {% if project.short_name != "mvp-demo" and project.short_name != "mvp-01-gold-standard" %}
                             <a class="btn remove-cookie" data-project_short_name="{{ project.short_name }}">
                                 {{ _('Show tutorial next time I click "Try It"') }}
                             </a>
