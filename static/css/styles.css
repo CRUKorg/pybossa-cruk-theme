@@ -5055,6 +5055,111 @@ h6 [class^="icon-"] {
 /*
  * MVP STYLING
  */
+/* Tutorial */
+.zoomContainer {
+  z-index: 1999;
+  z-index: 2000 !important;
+}
+.modal {
+  margin-left: -400px;
+  top: 45%;
+  width: 800px;
+  z-index: 1999 !important;
+}
+.modal .modal-body {
+  display: table;
+  max-height: 600px;
+  padding: 0;
+  z-index: 1200 !important;
+}
+.modal .modal-body .modal-image {
+  float: left;
+  width: 460px;
+  word-break: keep-all;
+}
+.modal .modal-body .modal-info {
+  float: left;
+  padding: 20px;
+  width: 300px;
+  word-break: keep-all;
+}
+.modal .modal-body .carousel {
+  margin-bottom: 0;
+}
+.modal .modal-body .carousel-control {
+  top: 50%;
+}
+.modal-backdrop {
+  z-index: 1000 !important;
+}
+.carousel-indicators-custom {
+  bottom: 15px;
+  position: absolute;
+  right: -325px;
+  text-align: center;
+}
+.carousel-indicators-custom div {
+  background-color: #efefef;
+  cursor: pointer;
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 10px;
+  padding: 10px;
+  width: 20px;
+}
+.carousel-indicators-custom div.active {
+  background-color: yellow;
+  display: inline-block;
+  width: 20px;
+}
+.modal-info .item-inner {
+  display: none;
+}
+.modal-info .item-inner.active {
+  display: block;
+}
+.wrappy {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  height: 100%;
+  left: 0;
+  line-height: 1.2;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3000 !important;
+}
+.wrappy.active,
+.ios .wrappy,
+.ipad .wrappy,
+.mobile .wrappy,
+.tablet .wrappy,
+.andriod .wrappy,
+.androidTablet .wrappy,
+.blackberry .wrappy {
+  display: block;
+}
+.device-message {
+  font-size: 0;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.casper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.device-message-inner {
+  background-color: white;
+  display: inline-block;
+  padding: 38px;
+  vertical-align: middle;
+  width: 50%;
+}
+/* Mechanic */
 .zoomContainer {
   z-index: 100;
   z-index: 1999;

@@ -65,6 +65,122 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
 /*
  * MVP STYLING
  */
+
+
+ /* Tutorial */
+
+// Width variables (appears count calculates by raw css)
+@width4: 20px; // Appears 2 times
+
+// Height variables (appears count calculates by raw css)
+@height1: 100%; // Appears 3 times
+
+.zoomContainer {
+	z-index: 1999;
+	z-index: 2000 !important;
+}
+.modal {
+	margin-left: -400px;
+	top: 45%;
+	width: 800px;
+	z-index: 1999 !important;
+	.modal-body {
+		display: table;
+		max-height: 600px;
+		padding: 0;
+		z-index: 1200 !important;
+		.modal-image {
+			float: left;
+			width: 460px;
+			word-break: keep-all;
+		}
+		.modal-info {
+			float: left;
+			padding: 20px;
+			width: 300px;
+			word-break: keep-all;
+		}
+		.carousel {
+			margin-bottom: 0;
+		}
+		.carousel-control {
+			top: 50%;
+		}
+	}
+}
+.modal-backdrop {
+	z-index: 1000 !important;
+}
+.carousel-indicators-custom {
+	bottom: 15px;
+	position: absolute;
+	right: -325px;
+	text-align: center;
+	div {
+		background-color: #efefef;
+		cursor: pointer;
+		display: inline-block;
+		list-style-type: none;
+		margin-left: 10px;
+		padding: 10px;
+		width: @width4;
+	}
+	div.active {
+		background-color: yellow;
+		display: inline-block;
+		width: @width4;
+	}
+}
+.modal-info {
+	.item-inner {
+		display: none;
+	}
+	.item-inner.active {
+		display: block;
+	}
+}
+.wrappy {
+	background-color: rgba(0, 0, 0, 0.9);
+	display: none;
+	height: @height1;
+	left: 0;
+	line-height: 1.2;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 3000 !important;
+}
+.wrappy.active, .ios .wrappy, .ipad .wrappy, .mobile .wrappy, .tablet .wrappy, .andriod .wrappy, .androidTablet .wrappy, .blackberry .wrappy  {
+	display: block;
+}
+.device-message {
+	font-size: 0;
+	height: @height1;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+.casper {
+	display: inline-block;
+	height: @height1;
+	vertical-align: middle;
+}
+.device-message-inner {
+	background-color: white;
+	display: inline-block;
+	padding: 38px;
+	vertical-align: middle;
+	width: 50%;
+}
+
+
+ /* Mechanic */
+
+
+
+
+
 // Color variables (appears count calculates by raw css)
 @color0: #efefef; // Appears 2 times
 
