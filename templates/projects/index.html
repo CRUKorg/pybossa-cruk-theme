@@ -4,7 +4,7 @@
 
 {% block content %}
     <script src="{{ url_for('static', filename='js/vendor/isotope.pkgd.min.js') }}"></script>
-    <h1 class="row">
+    < class="row">
         <div class="span3">
             <ul data-spy="affix" data-offset-top="200px" class="nav nav-list bs-docs-sidenav affix-top">
                 {% for c in categories %}
@@ -46,7 +46,7 @@
                         {% if current_user.admin == 1 %}
                             <i class="icon-th"></i> {{ pagination.total_count }} {{ active_cat.name }} Projects</h1>
                         {% else %}
-                            <i class="icon-th"></i> {{ current_user.info.get("groups", "").split(",")|length }}</h1>
+                            <i class="icon-th"></i> {{ current_user.info.get("groups", "").split(",")|length }}
                         {% endif %}
                     <h2>{{ active_cat.description }}</h2>
                 {% endif %}
