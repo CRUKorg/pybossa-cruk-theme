@@ -51,8 +51,8 @@
         {% if ( current_user.is_authenticated() and current_user.id == project.owner_id
     and current_user.pro) or current_user.admin %}
             <li {% if active_link=="auditlog" %}class="active"{% endif %}><a
-                    href="{{ url_for('project.auditlog', short_name=project.short_name) }}"><i
-                    class="icon-chevron-right"></i> {{ _('Audit Logs') }}</a></li>
+                href="{{ url_for('project.auditlog', short_name=project.short_name) }}"><i
+                class="icon-chevron-right"></i> {{ _('Audit Logs') }}</a></li>
         {% endif %}
         <li {% if active_link=="blog" %}class="active"{% endif %}>
             <a href="{{ url_for('project.show_blogposts', short_name=project.short_name) }}"><i class="icon-chevron-right"></i> {{ _('Blog') }}
@@ -177,12 +177,12 @@
                 {% if active_cat != "draft" %}
                     <p style="margin:0">
                         <a class="btn btn-primary"
-                           href="{{ url_for('project.presenter', short_name = project.short_name) }}">
+                            href="{{ url_for('project.presenter', short_name = project.short_name) }}">
                             <i class="icon icon-white icon-ok"></i> {{ _('Try it!') }}
                         </a>
-                        {% if project.name == "CRUK mvp-01" or project.name == "CRUK mvp-02" or project.name == "CRUK mvp-02a" or project.name == "CRUK mvp-02b" or project.name == "CRUK mvp-02c" %}
-                            <a class="btn btn-primary remove-cookie">
-                                <i class="icon icon-white icon-ok"></i> {{ _('Remove MVP Cookie!') }}
+                        {% if project.short_name != "mvp-demo" and project.short_name != "mvp-01-gold-standard" %}
+                            <a class="btn remove-cookie" data-project_short_name="{{ project.short_name }}">
+                                {{ _('Show tutorial next time I click "Try It"') }}
                             </a>
                         {% endif %}
                     </p>
@@ -300,7 +300,8 @@
     {% elif project.info.thumbnail %}
         <img id="{{ id }}" class="{{ class }}" width="{{ width }}" src="{{ project.info.thumbnail }}" style="{{ style }}" onerror="imgError(this);">
     {% else %}
-        <img id="{{ id }}" class="{{ class }}" width="{{ width }}" src="{{ url_for('static', filename='img/placeholder.project.png') }}" style="{{ style }}">
+{#        <img id="{{ id }}" class="{{ class }}" width="{{ width }}" src="{{ url_for('static', filename='img/placeholder.project.png') }}" style="{{ style }}">#}
+        <img id="{{ id }}" class="{{ class }}" width="{{ width }}" src="{{ url_for('static', filename='img/cruk/cruk-citsci-hero-small.png') }}" style="{{ style }}">
     {% endif %}
 {% endmacro %}
 

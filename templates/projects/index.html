@@ -99,16 +99,21 @@
             $("#order").text(sortValue);
         }
     });
-    $(".remove-cookie").on("click", function() {
-        $.removeCookie('mvp-01tutorial', { path: "/" } );
-        $.removeCookie('mvp-02tutorial', { path: "/" } );
-        $.removeCookie('mvp-02atutorial', { path: "/" } );
 
-        $.removeCookie('mvp-02btutorial', { path: "/" } );
-        $.removeCookie('mvp-02ctutorial', { path: "/" } );
-
-        $.removeCookie('mvp-01-gold-standardtutorial', { path: "/" } );
+    /*
+        For projects listed on the project listing page, some have a button that is designed to allow the user
+        to clear the cookie that prevents the tutorial from being shown before they continue contributing. This
+        is the handler for this button.
+     */
+    $(".remove-cookie").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $button = $(this);
+        var project_short_name = $button.data("project_short_name");
+        var cookie_name = project_short_name + "tutorial";
+        $.removeCookie(cookie_name, { path: "/" } );
     });
+
     // change is-checked class on buttons
     $('.dropdown-toggle').each(function(i, buttonGroup) {
         var $buttonGroup = $(buttonGroup);
