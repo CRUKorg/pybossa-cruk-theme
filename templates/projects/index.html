@@ -19,7 +19,7 @@
                 {% endif %}
             </ul>
         </div>
-        <div class="span9">
+        <h1 class="span9">
             <div id="sorts" class="btn-group pull-right" style="margin-top:12px;">
                 <button class="btn dropdown-toggle" data-toggle="dropdown" data-sort-value="original-order">Order by
                     <span id="order">name</span> <span class="caret"></span></button>
@@ -46,7 +46,7 @@
                         {% if current_user.admin == 1 %}
                             <i class="icon-th"></i> {{ pagination.total_count }} {{ active_cat.name }} Projects</h1>
                         {% else %}
-                            <i class="icon-th"></i> {{ len(current_user.info.get("groups", "").split(",")) }}</h1>
+                            <i class="icon-th"></i> {{ current_user.info.get("groups", "").split(",")|length }}</h1>
                         {% endif %}
                     <h2>{{ active_cat.description }}</h2>
                 {% endif %}
