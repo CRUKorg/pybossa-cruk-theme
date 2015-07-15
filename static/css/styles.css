@@ -5055,9 +5055,6 @@ h6 [class^="icon-"] {
 /*
  * MVP STYLING
  */
-/*
- * MVP STYLING
- */
 /* Variables */
 /* Utility */
 .clearfix:before {
@@ -5217,27 +5214,6 @@ h6 [class^="icon-"] {
   height: 70px;
   width: 70px;
 }
-.slick-prev {
-  background-color: rgba(231, 76, 60, 0.8);
-}
-.slick-prev:hover {
-  background-color: rgba(231, 76, 60, 0.8);
-}
-.slick-prev:focus {
-  background-color: rgba(231, 76, 60, 0.8);
-}
-.slick-next {
-  background-color: rgba(0, 163, 136, 0.5);
-}
-.slick-next:hover {
-  background-color: rgba(0, 163, 136, 0.5);
-}
-.slick-next:focus {
-  background-color: rgba(0, 163, 136, 0.5);
-}
-.slick-disabled {
-  background-color: transparent;
-}
 .example-list {
   margin-bottom: 40px;
 }
@@ -5297,4 +5273,26 @@ h6 [class^="icon-"] {
   position: absolute;
   top: 50%;
   width: 40px;
+}
+/* Slick Slider */
+.slick-prev {
+  background-color: rgba(231, 76, 60, 0.8);
+}
+.slick-prev:hover {
+  background-color: rgba(231, 76, 60, 0.8);
+}
+.slick-prev:focus {
+  background-color: rgba(231, 76, 60, 0.8);
+}
+.slick-next {
+  background-color: rgba(0, 163, 136, 0.5);
+}
+.slick-next:hover {
+  background-color: rgba(0, 163, 136, 0.5);
+}
+.slick-next:focus {
+  background-color: rgba(0, 163, 136, 0.5);
+}
+.slick-disabled {
+  background-color: transparent;
 }
