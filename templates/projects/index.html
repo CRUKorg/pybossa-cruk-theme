@@ -43,7 +43,11 @@
                     <h2>{{ _('Work in progress projects') }}</h2>
                 {% else %}
                     <h1>
-                        <i class="icon-th"></i> {{ pagination.total_count }} {{ active_cat.name }} Projects</h1>
+                        {% if current_user.admin == 1 %}
+                            <i class="icon-th"></i> {{ pagination.total_count }} {{ active_cat.name }} Projects</h1>
+                        {% else %}
+                            <i class="icon-th"></i> {{ len(current_user.info.get("groups", "").split(",")) }}
+                        {% endif %}
                     <h2>{{ active_cat.description }}</h2>
                 {% endif %}
 
