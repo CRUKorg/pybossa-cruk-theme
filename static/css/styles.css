@@ -5210,19 +5210,19 @@ h6 [class^="icon-"] {
   top: 0;
   z-index: 10;
 }
+.site-content .nextSlideBtn {
+  float: right;
+}
+.site-content #difficulty {
+  width: 100%;
+}
+.site-content .progress {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
 .zoomLens {
   height: 70px;
   width: 70px;
-}
-.nextSlideBtn {
-  float: right;
-}
-#difficulty {
-  width: 100%;
-}
-.progress {
-  margin-bottom: 0;
-  margin-top: 20px;
 }
 .site-header .alert {
   text-align: center;
