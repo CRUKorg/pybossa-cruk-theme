@@ -5055,9 +5055,22 @@ h6 [class^="icon-"] {
 /*
  * MVP STYLING
  */
+/*
+ * MVP STYLING
+ */
+/* Variables */
+/* Utility */
+.clearfix:before {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
 /* Tutorial */
 .zoomContainer {
-  z-index: 1999;
   z-index: 2000 !important;
 }
 .modal {
@@ -5160,78 +5173,6 @@ h6 [class^="icon-"] {
   width: 50%;
 }
 /* Mechanic */
-.zoomContainer {
-  z-index: 100;
-  z-index: 1999;
-  z-index: 2000 !important;
-}
-.modal {
-  margin-left: -400px;
-  top: 45%;
-  width: 800px;
-  z-index: 1999 !important;
-}
-.modal .modal-body {
-  display: table;
-  max-height: 600px;
-  padding: 0;
-  z-index: 1200 !important;
-}
-.modal .modal-body .modal-image {
-  float: left;
-  width: 460px;
-  word-break: keep-all;
-}
-.modal .modal-body .modal-info {
-  float: left;
-  padding: 20px;
-  width: 300px;
-  word-break: keep-all;
-}
-.modal .modal-body .carousel {
-  margin-bottom: 0;
-}
-.modal .modal-body .carousel-control {
-  top: 50%;
-}
-.modal-backdrop {
-  z-index: 1000 !important;
-}
-.carousel-indicators-custom {
-  bottom: 15px;
-  position: absolute;
-  right: -325px;
-  text-align: center;
-}
-.carousel-indicators-custom div {
-  background-color: #efefef;
-  cursor: pointer;
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 10px;
-  padding: 10px;
-  width: 20px;
-}
-.carousel-indicators-custom div.active {
-  background-color: yellow;
-  display: inline-block;
-  width: 20px;
-}
-.modal-info .item-inner {
-  display: none;
-}
-.modal-info .item-inner.active {
-  display: block;
-}
-.clearfix:before {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-  content: " ";
-  display: table;
-}
 .grid-info {
   background-color: #efefef;
   box-sizing: border-box;
@@ -5250,7 +5191,7 @@ h6 [class^="icon-"] {
   top: 0;
   width: 100%;
 }
-.img-polaroid {
+.site-content .img-polaroid {
   height: auto;
   padding: 0;
   position: absolute;
@@ -5258,16 +5199,16 @@ h6 [class^="icon-"] {
   width: 100%;
   z-index: 1;
 }
-rect.grid-item.grid-item-success {
+.site-content rect.grid-item.grid-item-success {
   fill: rgba(231, 76, 60, 0.8);
 }
-rect.grid-item.grid-item-error {
+.site-content rect.grid-item.grid-item-error {
   fill: rgba(0, 163, 136, 0.5);
 }
-#zoom_01 {
+.site-content #zoom_01 {
   width: 400px;
 }
-#canvas {
+.site-content #canvas {
   position: absolute;
   top: 0;
   z-index: 10;

@@ -67,118 +67,19 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
  */
 
 
- /* Tutorial */
+
+/*
+ * MVP STYLING
+ */
+
+
+/* Variables */
 
 // Width variables (appears count calculates by raw css)
 @width4: 20px; // Appears 2 times
 
 // Height variables (appears count calculates by raw css)
 @height1: 100%; // Appears 3 times
-
-.zoomContainer {
-	z-index: 1999;
-	z-index: 2000 !important;
-}
-.modal {
-	margin-left: -400px;
-	top: 45%;
-	width: 800px;
-	z-index: 1999 !important;
-	.modal-body {
-		display: table;
-		max-height: 600px;
-		padding: 0;
-		z-index: 1200 !important;
-		.modal-image {
-			float: left;
-			width: 460px;
-			word-break: keep-all;
-		}
-		.modal-info {
-			float: left;
-			padding: 20px;
-			width: 300px;
-			word-break: keep-all;
-		}
-		.carousel {
-			margin-bottom: 0;
-		}
-		.carousel-control {
-			top: 50%;
-		}
-	}
-}
-.modal-backdrop {
-	z-index: 1000 !important;
-}
-.carousel-indicators-custom {
-	bottom: 15px;
-	position: absolute;
-	right: -325px;
-	text-align: center;
-	div {
-		background-color: #efefef;
-		cursor: pointer;
-		display: inline-block;
-		list-style-type: none;
-		margin-left: 10px;
-		padding: 10px;
-		width: @width4;
-	}
-	div.active {
-		background-color: yellow;
-		display: inline-block;
-		width: @width4;
-	}
-}
-.modal-info {
-	.item-inner {
-		display: none;
-	}
-	.item-inner.active {
-		display: block;
-	}
-}
-.wrappy {
-	background-color: rgba(0, 0, 0, 0.9);
-	display: none;
-	height: @height1;
-	left: 0;
-	line-height: 1.2;
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 100%;
-	z-index: 3000 !important;
-}
-.wrappy.active, .ios .wrappy, .ipad .wrappy, .mobile .wrappy, .tablet .wrappy, .andriod .wrappy, .androidTablet .wrappy, .blackberry .wrappy  {
-	display: block;
-}
-.device-message {
-	font-size: 0;
-	height: @height1;
-	margin: 0 auto;
-	position: relative;
-	text-align: center;
-}
-.casper {
-	display: inline-block;
-	height: @height1;
-	vertical-align: middle;
-}
-.device-message-inner {
-	background-color: white;
-	display: inline-block;
-	padding: 38px;
-	vertical-align: middle;
-	width: 50%;
-}
-
-
- /* Mechanic */
-
-
-
 
 
 // Color variables (appears count calculates by raw css)
@@ -189,210 +90,264 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
 @width7: 20px; // Appears 2 times
 
 
+/* Utility */
+
+.clearfix {
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}
+
+
+
+ /* Tutorial */
+
 .zoomContainer {
-	z-index: 100;
-	z-index: 1999;
-	z-index: 2000 !important;
+  z-index: 2000 !important;
 }
 .modal {
-	margin-left: -400px;
-	top: 45%;
-	width: 800px;
-	z-index: 1999 !important;
-	.modal-body {
-		display: table;
-		max-height: 600px;
-		padding: 0;
-		z-index: 1200 !important;
-		.modal-image {
-			float: left;
-			width: 460px;
-			word-break: keep-all;
-		}
-		.modal-info {
-			float: left;
-			padding: 20px;
-			width: 300px;
-			word-break: keep-all;
-		}
-		.carousel {
-			margin-bottom: 0;
-		}
-		.carousel-control {
-			top: 50%;
-		}
-	}
+  margin-left: -400px;
+  top: 45%;
+  width: 800px;
+  z-index: 1999 !important;
+  .modal-body {
+    display: table;
+    max-height: 600px;
+    padding: 0;
+    z-index: 1200 !important;
+    .modal-image {
+      float: left;
+      width: 460px;
+      word-break: keep-all;
+    }
+    .modal-info {
+      float: left;
+      padding: 20px;
+      width: 300px;
+      word-break: keep-all;
+    }
+    .carousel {
+      margin-bottom: 0;
+    }
+    .carousel-control {
+      top: 50%;
+    }
+  }
 }
 .modal-backdrop {
-	z-index: 1000 !important;
+  z-index: 1000 !important;
 }
 .carousel-indicators-custom {
-	bottom: 15px;
-	position: absolute;
-	right: -325px;
-	text-align: center;
-	div {
-		background-color: @color0;
-		cursor: pointer;
-		display: inline-block;
-		list-style-type: none;
-		margin-left: 10px;
-		padding: 10px;
-		width: @width7;
-	}
-	div.active {
-		background-color: yellow;
-		display: inline-block;
-		width: @width7;
-	}
+  bottom: 15px;
+  position: absolute;
+  right: -325px;
+  text-align: center;
+  div {
+    background-color: #efefef;
+    cursor: pointer;
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 10px;
+    padding: 10px;
+    width: @width4;
+  }
+  div.active {
+    background-color: yellow;
+    display: inline-block;
+    width: @width4;
+  }
 }
 .modal-info {
-	.item-inner {
-		display: none;
-	}
-	.item-inner.active {
-		display: block;
-	}
+  .item-inner {
+    display: none;
+  }
+  .item-inner.active {
+    display: block;
+  }
 }
-.clearfix {
-	&:before {
-		content: " ";
-		display: table;
-	}
-	&:after {
-		clear: both;
-		content: " ";
-		display: table;
-	}
+.wrappy {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  height: @height1;
+  left: 0;
+  line-height: 1.2;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3000 !important;
 }
+.wrappy.active, .ios .wrappy, .ipad .wrappy, .mobile .wrappy, .tablet .wrappy, .andriod .wrappy, .androidTablet .wrappy, .blackberry .wrappy  {
+  display: block;
+}
+.device-message {
+  font-size: 0;
+  height: @height1;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.casper {
+  display: inline-block;
+  height: @height1;
+  vertical-align: middle;
+}
+.device-message-inner {
+  background-color: white;
+  display: inline-block;
+  padding: 38px;
+  vertical-align: middle;
+  width: 50%;
+}
+
+
+
+/* Mechanic */
+
+
+
 .grid-info {
-	background-color: @color0;
-	box-sizing: border-box;
-	padding: 20px;
-	span {
-		font-size: 18px;
-	}
+  background-color: @color0;
+  box-sizing: border-box;
+  padding: 20px;
+  span {
+    font-size: 18px;
+  }
 }
 .grid-wrapper {
-	height: 460px;
-	position: relative;
+  height: 460px;
+  position: relative;
 }
 .grid {
-	border-spacing: 0;
-	position: absolute;
-	top: 0;
-	width: @width6;
+  border-spacing: 0;
+  position: absolute;
+  top: 0;
+  width: @width6;
 }
-.img-polaroid {
-	height: auto;
-	padding: 0;
-	position: absolute;
-	top: 0;
-	width: @width6;
-	z-index: 1;
+
+
+.site-content {
+    .img-polaroid {
+  height: auto;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: @width6;
+  z-index: 1;
 }
 rect.grid-item.grid-item-success {
-	fill: rgba(231, 76, 60, .8);
+  fill: rgba(231, 76, 60, .8);
 }
 rect.grid-item.grid-item-error {
-	fill: rgba(0, 163, 136, .5);
+  fill: rgba(0, 163, 136, .5);
 }
 #zoom_01 {
-	width: 400px;
+  width: 400px;
 }
 #canvas {
-	position: absolute;
-	top: 0;
-	z-index: 10;
+  position: absolute;
+  top: 0;
+  z-index: 10;
 }
+
+}
+
+
+
 .zoomLens {
-	height: 70px;
-	width: 70px;
+  height: 70px;
+  width: 70px;
 }
 .slick-prev {
-	background-color: rgba(231, 76, 60, .8);
-	&:hover {
-		background-color: rgba(231, 76, 60, .8);
-	}
-	&:focus {
-		background-color: rgba(231, 76, 60, .8);
-	}
+  background-color: rgba(231, 76, 60, .8);
+  &:hover {
+    background-color: rgba(231, 76, 60, .8);
+  }
+  &:focus {
+    background-color: rgba(231, 76, 60, .8);
+  }
 }
 .slick-next {
-	background-color: rgba(0, 163, 136, .5);
-	&:hover {
-		background-color: rgba(0, 163, 136, .5);
-	}
-	&:focus {
-		background-color: rgba(0, 163, 136, .5);
-	}
+  background-color: rgba(0, 163, 136, .5);
+  &:hover {
+    background-color: rgba(0, 163, 136, .5);
+  }
+  &:focus {
+    background-color: rgba(0, 163, 136, .5);
+  }
 }
 .slick-disabled {
-	background-color: transparent;
+  background-color: transparent;
 }
 .example-list {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .example-list-item {
-	box-sizing: border-box;
-	float: left;
-	margin-right: 5px;
-	margin: 0;
-	overflow: hidden;
-	position: relative;
-	width: 20%;
-	&:hover {
-		.description {
-			left: 0;
-			opacity: 1;
-		}
-	}
-	.description {
-		background-color: rgba(0, 0, 0, 0.6);
-		color: white;
-		display: block;
-		font-family: sans-serif;
-		font-weight: 100;
-		letter-spacing: 1px;
-		position: absolute;
-		text-align: center;
-		top: 0;
-		width: @width6;
-	}
-	.description.cancer {
-		background-color: rgba(231, 76, 60, .8);
-	}
-	.description.non-cancer {
-		background-color: rgba(0, 163, 136, .7);
-	}
+  box-sizing: border-box;
+  float: left;
+  margin-right: 5px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 20%;
+  &:hover {
+    .description {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  .description {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: block;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: @width6;
+  }
+  .description.cancer {
+    background-color: rgba(231, 76, 60, .8);
+  }
+  .description.non-cancer {
+    background-color: rgba(0, 163, 136, .7);
+  }
 }
 .example-list-item.last {
-	margin-right: 0;
+  margin-right: 0;
 }
 .nextSlideBtn {
-	float: right;
+  float: right;
 }
 #difficulty {
-	width: @width6;
+  width: @width6;
 }
 .progress {
-	margin-bottom: 0;
-	margin-top: 20px;
+  margin-bottom: 0;
+  margin-top: 20px;
 }
 .site-header {
-	.alert {
-		text-align: center;
-	}
+  .alert {
+    text-align: center;
+  }
 }
 .zoomWindowContainer {
-	&:after {
-		content: " ";
-		height: 40px;
-		left: 50%;
-		margin-bottom: -20px;
-		margin-top: -20px;
-		position: absolute;
-		top: 50%;
-		width: 40px;
-	}
+  &:after {
+    content: " ";
+    height: 40px;
+    left: 50%;
+    margin-bottom: -20px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+  }
 }
