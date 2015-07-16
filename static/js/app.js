@@ -1,4 +1,3 @@
-"use strict";
 
 
 /*
@@ -6,7 +5,6 @@
  */
 
 
-(function() {
     function runApp(task) {
 
         var openModalCount = 0;
@@ -250,4 +248,3 @@
 
 
     }
-});
