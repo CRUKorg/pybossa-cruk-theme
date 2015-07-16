@@ -5,6 +5,12 @@
  */
 
 
+    function runApp(r,m,z) {
+
+
+
+
+
 
          /* Init example cells carousel */
 
@@ -236,3 +242,7 @@
         if (BrowserDetect.browser == 'Explorer') {
             $(".wrappy").addClass("active");
         }
+
+
+
+    }
