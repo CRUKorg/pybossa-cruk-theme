@@ -11,6 +11,9 @@
 
         //Modal.call(this);
 
+        console.log(this);
+        console.log(Zoom);
+
         this.task = task;
         this.activateCell();
 

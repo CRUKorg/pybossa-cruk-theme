@@ -13,13 +13,22 @@
     }
 
     Modal.prototype.open = function(){
+
+        Grid.call(this);
+
         $('.modal').modal({
             backdrop: 'static',
             keyboard: false
         });
         this.showStep("next");
 
+
     }
+
+
+    Modal.prototype = Object.create(Grid.prototype);
+
+
 
     Modal.prototype.showStep = function(action){
 

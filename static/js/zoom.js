@@ -7,8 +7,10 @@
      */
 
     function Zoom() {
-
+        Grid.call(this);
     }
+
+    Zoom.prototype = Object.create(Grid.prototype);
 
     Zoom.prototype.addZoom = function( element ){
         element.elevateZoom({
