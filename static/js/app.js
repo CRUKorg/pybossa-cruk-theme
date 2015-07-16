@@ -5,16 +5,6 @@
  */
 
 
-    function runApp(task) {
-
-        var openModalCount = 0;
-
-        var z = new Zoom(),
-            r = new Grid(task),
-            m = new Modal();
-
-        r.createGrid();
-
 
          /* Init example cells carousel */
 
@@ -25,6 +15,8 @@
             slidesToScroll: 5,
             slidesToShow: 5
         });
+
+        alert("sdfsdf");
 
 
         /*
@@ -244,7 +236,3 @@
         if (BrowserDetect.browser == 'Explorer') {
             $(".wrappy").addClass("active");
         }
-
-
-
-    }
