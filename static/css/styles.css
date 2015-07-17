@@ -5205,7 +5205,8 @@ h6 [class^="icon-"] {
 .site-content #zoom_01 {
   width: 400px;
 }
-.site-content #canvas {
+.site-content #feedbackCanvas,
+.site-content #mechanicCanvas {
   position: absolute;
   top: 0;
   z-index: 10;
