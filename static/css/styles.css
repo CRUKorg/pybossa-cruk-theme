@@ -5202,6 +5202,12 @@ h6 [class^="icon-"] {
 .site-content rect.grid-item.grid-item-error {
   fill: rgba(0, 163, 136, 0.5);
 }
+.site-content rect.grid-item.agree {
+  fill: #e74c3c;
+}
+.site-content rect.grid-item.disagree {
+  fill: #00a388;
+}
 .site-content #zoom_01 {
   width: 400px;
 }
