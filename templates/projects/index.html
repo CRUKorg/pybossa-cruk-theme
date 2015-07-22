@@ -58,7 +58,7 @@
                             level, not here. but this will do for the first MVP (MG)
                             TODO: Refactor this filtering of the projects collection to page level
                         #}
-                        {% if current_user.admin == 1 or project.short_name in current_user.info.get("groups", "").split(",") %}
+                        {% if current_user.admin == 1 or project.short_name in current_user.info.get("groups", "").split(",") or (project.short_name.find('gold') >=0  and current_user.info.get("groups", "").find('gold') >= 0) %}
                             {{ helper.show_project(project, active_cat.short_name, current_user, upload_method) }}
                         {% endif %}
                     {% endfor %}
