@@ -5290,13 +5290,13 @@ h6 [class^="icon-"] {
 .slick-prev,
 .slick-next {
   margin-top: -20px;
-  background-color: none;
+  background-color: transparent;
 }
 .slick-prev:before,
 .slick-next:before {
   font-size: 40px;
   color: black;
-  background-color: none;
+  background-color: transparent;
 }
 .slick-prev {
   left: -55px;
