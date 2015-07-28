@@ -375,24 +375,26 @@ rect.grid-item.disagree {
 /* Slick Slider */
 
 
-.slick-prev {
-  background-color: rgba(231, 76, 60, .8);
-  &:hover {
-    background-color: rgba(231, 76, 60, .8);
-  }
-  &:focus {
-    background-color: rgba(231, 76, 60, .8);
-  }
-}
-.slick-next {
-  background-color: rgba(0, 163, 136, .5);
-  &:hover {
-    background-color: rgba(0, 163, 136, .5);
-  }
-  &:focus {
-    background-color: rgba(0, 163, 136, .5);
-  }
-}
 .slick-disabled {
   background-color: transparent;
 }
+
+
+  .slick-prev, .slick-next {
+        margin-top: -20px;
+        background-color: none;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        font-size: 40px;
+        color: black;
+        background-color: none;
+    }
+
+    .slick-prev {
+        left: -55px;
+
+    }
+    .slick-next {
+        right: -55px;
+    }
