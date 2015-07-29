@@ -116,6 +116,7 @@
         var cookie_name = project_short_name + "tutorial";
         $.removeCookie(cookie_name, { path: "/" } );
 
+        console.log( project_short_name );
         if( "project_short_name" === "mvp-03"){
             var cookie_feedback_name = project_short_name + 'feedback';
             var cookie_tutorial_name = project_short_name + 'tutorial';
