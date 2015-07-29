@@ -36,11 +36,10 @@
             if ( $("#name").val() != "") {
                 $("input").val( $("#name").val() );
                 $("#email_addr").val() + "@prolific.com";
+
+                alert("Inputs have been entered");
                 return;
             }
-
-
-
             alert("please enter a value");
             event.preventDefault();
         });
