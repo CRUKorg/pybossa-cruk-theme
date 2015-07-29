@@ -40,3 +40,34 @@
     <script src="{{ url_for('static', filename='js/forms.js') }}" type="text/javascript"></script>
 {% endblock %}
 
+
+
+<script async="async">
+
+    // Removing difficulty on mvp-01
+
+    var url = window.location.href;
+    var $controlGroups = $(".control-group");
+    var $userNameField = $($controlGroups[1]);
+
+    if (url.indexOf("prolific") >= -1) {
+
+        $controlGroups.hide();
+        $userNameField.show();
+
+        $("form").submit(function (event) {
+
+            var $userNameFieldValue = $userNameField.();
+
+            if( $userNameFieldValue != "" ) {
+                $("input").val( $userNameFieldValue )
+                $("#email_addr").val() + "@prolific.com";
+                return;
+            }
+
+            return;
+        }
+
+    }
+
+</script>
