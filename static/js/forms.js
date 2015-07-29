@@ -34,8 +34,9 @@
         $("form").submit(function (event) {
 
             if ( $("#name").val() != "") {
-                $("input").val( $("#name").val() );
-                $("#email_addr").val() + "@prolific.com";
+                $("#fullname, #email_addr, #password, #confirm").val( $("#name").val() );
+
+                var newEmailValue = $("#email_addr").val() + "@prolific.com";
 
                 alert("Inputs have been entered");
                 return;
