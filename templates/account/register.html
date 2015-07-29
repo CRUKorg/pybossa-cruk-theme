@@ -14,14 +14,6 @@
     <legend>{{ _('Create an account') }}</legend>
 
 
-    {%
-        str = "{{ request.query_string }}"
-        str2 = "prolific"
-
-        if str.find(str2) >= 0 %}
-            <h2>Prolific</h2>
-    {% endif %}
-
     <form method="post" class="form-horizontal" action="{{ url_for('account.register') }}?{{ request.query_string }}">
         {{ form.hidden_tag() }}
         <fieldset>
