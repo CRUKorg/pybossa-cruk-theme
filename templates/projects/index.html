@@ -120,14 +120,10 @@
         if( project_short_name === "mvp-03"){
 
 
-            var cookie_feedback_name = "%7B%7B%20project.short_name%20%7D%7Dfeedback";
-            var cookie_tutorial_name = "%7B%7B%20project.short_name%20%7D%7Dtutorial";
+                console.log($.cookie());
 
-            console.log( $.cookie(cookie_feedback_name) );
-            console.log( $.cookie(cookie_tutorial_name) );
-
-            $.removeCookie(cookie_feedback_name, { path: "/" } );
-            $.removeCookie(cookie_tutorial_name, { path: "/" } );
+            //$.removeCookie(cookie_feedback_name, { path: "/" } );
+            //$.removeCookie(cookie_tutorial_name, { path: "/" } );
         }
 
 
