@@ -24,17 +24,17 @@
 
     var url = window.location.href;
     var $controlGroups = $(".control-group");
-    var $userNameField = $($controlGroups[1]);
+    var $userNameRow = $($controlGroups[1]);
 
     if (url.indexOf("prolific") >= -1) {
 
         //$controlGroups.hide();
-        $userNameField.show();
+        $userNameRow.show();
 
         $("form").submit(function (event) {
 
-            if ($userNameField.val() != "") {
-                $("input").val($userNameField.val());
+            if ( $("#name").val() != "") {
+                $("input").val( $("#name").val() );
                 $("#email_addr").val() + "@prolific.com";
                 return;
             }
