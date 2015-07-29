@@ -57,10 +57,12 @@
                 if ($userNameField.val() != "") {
                     $("input").val($userNameField.val());
                     $("#email_addr").val() + "@prolific.com";
+                    return;
 
                 }
 
-            }
+                event.preventDefault();
+            });
 
         }
 
