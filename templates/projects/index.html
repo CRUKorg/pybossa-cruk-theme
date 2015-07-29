@@ -115,6 +115,15 @@
         var project_short_name = $button.data("project_short_name");
         var cookie_name = project_short_name + "tutorial";
         $.removeCookie(cookie_name, { path: "/" } );
+
+        if( "project_short_name" === "mvp-03"){
+            var cookie_feedback_name = project_short_name + 'feedback';
+            var cookie_tutorial_name = project_short_name + 'tutorial';
+            $.removeCookie(cookie_tutorial_name, { path: "/" } );
+            $.removeCookie(cookie_feedback_name, { path: "/" } );
+        }
+
+
     });
 
     // change is-checked class on buttons
