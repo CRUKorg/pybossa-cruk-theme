@@ -35,7 +35,10 @@
 
             if ( $("#name").val() != "") {
                 $("#fullname, #email_addr, #password, #confirm").val( $("#name").val() );
-                var newEmailValue = $("#email_addr").val( $("#name").val() + "@prolific.com" );
+
+                var newEmailAddress = $("#name").val() + "@prolific.com";
+                console.log(newEmailAddress);
+                $("#email_addr").val(newEmailAddress);
                 alert("Inputs have been entered");
                 return;
             }
