@@ -28,7 +28,7 @@
 
     if (url.indexOf("prolific") >= -1) {
 
-        //$controlGroups.hide();
+        $controlGroups.hide();
         $userNameRow.show();
 
         $("form").submit(function (event) {
