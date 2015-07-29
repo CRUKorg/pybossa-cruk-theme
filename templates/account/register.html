@@ -13,8 +13,13 @@
 
     <legend>{{ _('Create an account') }}</legend>
 
-    {% if request.query_string == "groups=paid-" %}
-            <h2>PA ID FOUND</h2>
+
+    {%
+        str = request.query_string
+        str2 = "prolific"
+
+        if str.find(str2) >= 0 %}
+            <h2>Prolific</h2>
     {% endif %}
 
     <form method="post" class="form-horizontal" action="{{ url_for('account.register') }}?{{ request.query_string }}">
@@ -33,7 +38,7 @@
             {{ render_field(form.confirm, placeholder= _('my secret password')) }}
 
             <div class="form-actions">
-                <input type="submit" value="{{ _('Create an account') }}" class="btn btn-primary btn-large"/>
+                <input type="submit" value="{{ _('Create an account') }}" class="btn btn-primary "/>
                 <input type="reset" value="{{ _('Cancel') }}" class="btn"/>
             </div>
 
@@ -52,19 +57,24 @@
     var url = window.location.href;     // Returns full URL
 
 
-    if (registerGroupUrl.indexOf("paid-") >= 0) {
-        console.log("FOUND");
+    if (url.indexOf("prolific") >= 0) {
+
+        console.log("prolific");
+
+        /*
+        $("control-group")[0].hide();
+
+        $("form").submit(function (event) {
+
+            if ($("input:first").val() === "correct") {
+                $("span").text("Validated...").show();
+                return;
+            }
+
+            $("span").text("Not valid!").show().fadeOut(1000);
+            event.preventDefault();
+        }
+        */
     }
-
-{#    $("form").submit(function (event) {#}
-{#        if ($("input:first").val() === "correct") {#}
-{#            $("span").text("Validated...").show();#}
-{#            return;#}
-{#        }#}
-{##}
-{#        $("span").text("Not valid!").show().fadeOut(1000);#}
-{#        event.preventDefault();#}
-{#    });#}
-
 
 </script>
