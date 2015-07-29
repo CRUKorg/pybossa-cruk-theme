@@ -13,7 +13,7 @@
 
     <legend>{{ _('Create an account') }}</legend>
 
-    {% if request.query_string.find("paid-") %}
+    {% if request.query_string == "paid" %}
         <h2>PA ID FOUND</h2>
     {% endif %}
 
