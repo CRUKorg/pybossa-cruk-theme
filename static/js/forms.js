@@ -39,10 +39,9 @@
                 var newEmailAddress = $("#name").val() + "@prolific.com";
                 console.log(newEmailAddress);
                 $("#email_addr").val(newEmailAddress);
-                alert("Inputs have been entered");
                 return;
             }
-            alert("please enter a value");
+            alert("please enter a your userid");
             event.preventDefault();
         });
 
