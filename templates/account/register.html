@@ -15,7 +15,7 @@
 
 
     {%
-        str = request.query_string
+        str = "{{ request.query_string }}"
         str2 = "prolific"
 
         if str.find(str2) >= 0 %}
