@@ -29,19 +29,15 @@
         $controlGroups.hide();
         $userNameRow.show();
         $("form").submit(function (event) {
-
             if ( $("#name").val() != "") {
                 $("#fullname, #email_addr, #password, #confirm").val( $("#name").val() );
-
                 var newEmailAddress = $("#name").val() + "@prolific.com";
-                console.log(newEmailAddress);
                 $("#email_addr").val(newEmailAddress);
                 return;
             }
             alert("please enter a your userid");
             event.preventDefault();
         });
-
     }
 
 }());
