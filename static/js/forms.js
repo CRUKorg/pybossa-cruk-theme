@@ -26,7 +26,7 @@
     var $controlGroups = $(".control-group");
     var $userNameRow = $($controlGroups[1]);
 
-    if (url.indexOf("prolific") >= -1) {
+    if ( url.indexOf("prolific") > -1) {
 
         $controlGroups.hide();
         $userNameRow.show();
