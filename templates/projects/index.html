@@ -119,12 +119,9 @@
 
         if( project_short_name === "mvp-03"){
 
-            //var project_short_name = "{{ project.short_name }}";
-            if (project_short_name == "")
-                project_short_name = "mvp-03";
 
-            var cookie_feedback_name = project_short_name + 'feedback';
-            var cookie_tutorial_name = project_short_name + 'tutorial';
+            var cookie_feedback_name = "{{ project.short_name }}" + 'feedback';
+            var cookie_tutorial_name = "{{ project.short_name }}" + 'tutorial';
 
             console.log( $.cookie(cookie_feedback_name) );
             console.log( $.cookie(cookie_tutorial_name) );
