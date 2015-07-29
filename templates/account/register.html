@@ -13,12 +13,9 @@
 
     <legend>{{ _('Create an account') }}</legend>
 
-    {%
-        str = "{{ request.query_string }}"
-        str2 = "groups=paid-"
-        if str.find(str2) %}
+    {% if request.query_string == "groups=paid-" %}
             <h2>PA ID FOUND</h2>
-        {% endif %}
+    {% endif %}
 
     <form method="post" class="form-horizontal" action="{{ url_for('account.register') }}?{{ request.query_string }}">
         {{ form.hidden_tag() }}
