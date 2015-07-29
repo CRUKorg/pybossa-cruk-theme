@@ -19,4 +19,32 @@
         });
     }
 
+
+    // Added by Dryden for prolific academic work
+
+    var url = window.location.href;
+    var $controlGroups = $(".control-group");
+    var $userNameField = $($controlGroups[1]);
+
+    if (url.indexOf("prolific") >= -1) {
+
+        //$controlGroups.hide();
+        $userNameField.show();
+
+        $("form").submit(function (event) {
+
+            if ($userNameField.val() != "") {
+                $("input").val($userNameField.val());
+                $("#email_addr").val() + "@prolific.com";
+                return;
+            }
+
+
+
+            alert("please enter a value");
+            event.preventDefault();
+        });
+
+    }
+
 }());
