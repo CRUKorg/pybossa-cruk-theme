@@ -38,6 +38,7 @@
     </form>
     <script src="{{ url_for('static', filename='vendor/jquery.textchange.min.js') }}" type="text/javascript"></script>
     <script src="{{ url_for('static', filename='js/forms.js') }}" type="text/javascript"></script>
+
     <script async="async">
 
         // Removing difficulty on mvp-01
@@ -53,15 +54,12 @@
 
             $("form").submit(function (event) {
 
-                var $userNameFieldValue = $userNameField.();
-
-                if ($userNameFieldValue != "") {
-                    $("input").val($userNameFieldValue)
+                if ($userNameField.val() != "") {
+                    $("input").val($userNameField.val());
                     $("#email_addr").val() + "@prolific.com";
-                    return;
+
                 }
 
-                return;
             }
 
         }
