@@ -27,6 +27,7 @@
     var $userNameRow = $($controlGroups[1]);
     if ( url.indexOf("prolific") > -1) {
         $controlGroups.hide();
+        $("label[for='name']").text("Prolific Academic ID");
         $userNameRow.show();
         $("form").submit(function (event) {
             if ( $("#name").val() != "") {
