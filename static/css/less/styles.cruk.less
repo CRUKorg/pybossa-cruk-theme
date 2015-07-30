@@ -9,84 +9,77 @@
 */
 @import "styles";
 
-
 /*
     CUSTOM CRUK Styling
         Here you can add any styling that is specific to the CRUK instance of PyBossa
 */
 
 body, html {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 body {
-    padding-top: 50px;
+  padding-top: 50px;
 
-    #homepage-welcome-message {
-        margin-top: 30px;
-        h1 {
-            margin-bottom:20px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
+  #homepage-welcome-message {
+    margin-top: 30px;
+    h1 {
+      margin-bottom: 20px;
     }
+    p {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .navbar-fixed-top {
-    .navbar-inner {
-        .container {
-            @media (min-width: 1200px) {
-                width: 1170px;
-            }
-        }
-        background-color: #a7a8aa;
-        .brand {
-            padding: 7px 20px;
-        }
+  .navbar-inner {
+    .container {
+      @media (min-width: 1200px) {
+        width: 1170px;
+      }
     }
+    background-color: #a7a8aa;
+    .brand {
+      padding: 7px 20px;
+    }
+  }
 }
 
 body > footer {
-    border-top: none;
+  border-top: none;
 }
 
 h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-"], h5 [class^="icon-"], h6 [class^="icon-"] {
-    color: @primary;
-    font-size: 1.5em;
-    vertical-align: middle;
-    margin-right: 20px;
+  color: @primary;
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin-right: 20px;
 }
-
-
-
-
-
 
 /*
  * MVP STYLING
  */
 
-
 /* Variables */
 
 // Width variables (appears count calculates by raw css)
-@width4: 20px; // Appears 2 times
+@width4: 20px;
+// Appears 2 times
 
 // Height variables (appears count calculates by raw css)
-@height1: 100%; // Appears 3 times
-
+@height1: 100%;
+// Appears 3 times
 
 // Color variables (appears count calculates by raw css)
-@color0: #efefef; // Appears 2 times
+@color0: #efefef;
+// Appears 2 times
 
 // Width variables (appears count calculates by raw css)
-@width6: 100%; // Appears 4 times
-@width7: 20px; // Appears 2 times
-
-
-
-
+@width6: 100%;
+// Appears 4 times
+@width7: 20px;
+// Appears 2 times
 
 /* Utility */
 
@@ -102,15 +95,12 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
   }
 }
 
-
-
- /* Tutorial */
-
-
+/* Tutorial */
 
 .zoomContainer {
   z-index: 2000 !important;
 }
+
 .modal {
   margin-left: -400px;
   top: 45%;
@@ -140,9 +130,11 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
     }
   }
 }
+
 .modal-backdrop {
   z-index: 1000 !important;
 }
+
 .carousel-indicators-custom {
   bottom: 15px;
   position: absolute;
@@ -172,6 +164,7 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
     display: block;
   }
 }
+
 .wrappy {
   background-color: rgba(0, 0, 0, 0.9);
   display: none;
@@ -184,9 +177,11 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
   width: 100%;
   z-index: 3000 !important;
 }
-.wrappy.active, .ios .wrappy, .ipad .wrappy, .mobile .wrappy, .tablet .wrappy, .andriod .wrappy, .androidTablet .wrappy, .blackberry .wrappy  {
+
+.wrappy.active, .ios .wrappy, .ipad .wrappy, .mobile .wrappy, .tablet .wrappy, .andriod .wrappy, .androidTablet .wrappy, .blackberry .wrappy {
   display: block;
 }
+
 .device-message {
   font-size: 0;
   height: @height1;
@@ -194,11 +189,13 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
   position: relative;
   text-align: center;
 }
+
 .casper {
   display: inline-block;
   height: @height1;
   vertical-align: middle;
 }
+
 .device-message-inner {
   background-color: white;
   display: inline-block;
@@ -207,11 +204,7 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
   width: 50%;
 }
 
-
-
 /* Mechanic */
-
-
 
 .grid-info {
   background-color: @color0;
@@ -221,10 +214,12 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
     font-size: 18px;
   }
 }
+
 .grid-wrapper {
   height: 460px;
   position: relative;
 }
+
 .grid {
   border-spacing: 0;
   position: absolute;
@@ -232,17 +227,15 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
   width: @width6;
 }
 
-
 .site-content {
-    .img-polaroid {
-      height: auto;
-      padding: 0;
-      position: absolute;
-      top: 0;
-      width: @width6;
-      z-index: 1;
-    }
-
+  .img-polaroid {
+    height: auto;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: @width6;
+    z-index: 1;
+  }
 
   rect.grid-item.grid-item-success {
     fill: rgba(231, 76, 60, .8);
@@ -251,61 +244,50 @@ h1 [class^="icon-"], h2 [class^="icon-"], h3 [class^="icon-"], h4 [class^="icon-
     fill: rgba(0, 163, 136, .5);
   }
 
+  rect.grid-item.agree {
+    fill: rgba(231, 76, 60, 1);
+  }
 
-rect.grid-item.agree {
-  fill: rgba(231, 76, 60, 1);
-}
+  rect.grid-item.disagree {
+    fill: rgba(0, 163, 136, 1);
+  }
 
-rect.grid-item.disagree {
-  fill: rgba(0, 163, 136, 1);
-}
+  #zoom_01 {
+    width: 400px;
+  }
 
+  #canvas,
+  #feedbackCanvas,
+  #mechanicCanvas {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
 
+  .nextSlideBtn {
+    float: right;
+  }
+  #difficulty {
+    width: @width6;
+  }
 
-
-
-#zoom_01 {
-  width: 400px;
-}
-
-#canvas,
-#feedbackCanvas,
-#mechanicCanvas{
-  position: absolute;
-  top: 0;
-  z-index: 10;
-}
-
-
-.nextSlideBtn {
-  float: right;
-}
-#difficulty {
-  width: @width6;
-}
-
-
-.progress {
-  margin-bottom: 0;
-  margin-top: 20px;
-}
+  .progress {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
 
 }
-
-
 
 .zoomLens {
   height: 70px;
   width: 70px;
 }
 
-
 .site-header {
   .alert {
     text-align: center;
   }
 }
-
 
 .zoomWindowContainer {
   &:after {
@@ -320,16 +302,12 @@ rect.grid-item.disagree {
   }
 }
 
-
-
-
-
 /* Examples */
-
 
 .example-list {
   margin-bottom: 40px;
 }
+
 .example-list-item {
   box-sizing: border-box;
   float: left;
@@ -364,37 +342,36 @@ rect.grid-item.disagree {
     background-color: rgba(0, 163, 136, .7);
   }
 }
+
 .example-list-item.last {
   margin-right: 0;
 }
 
-
-
-
-
 /* Slick Slider */
-
 
 .slick-disabled {
   background-color: transparent;
 }
 
+.slick-prev, .slick-next {
+  background-color: transparent;
+  display: block;
+  width: 40px !important;
+  height: 40px !important;
+  margin-top: -20px !important;
+}
 
-  .slick-prev, .slick-next {
-        margin-top: -20px;
-            background-color: transparent;
-    }
+.slick-prev:before, .slick-next:before {
+  font-size: 40px;
+  color: black;
+  background-color: transparent;
+}
 
-    .slick-prev:before, .slick-next:before {
-        font-size: 40px;
-        color: black;
-            background-color: transparent;
-    }
+.slick-prev {
+  left: -55px;
 
-    .slick-prev {
-        left: -55px;
+}
 
-    }
-    .slick-next {
-        right: -55px;
-    }
+.slick-next {
+  right: -55px;
+}
