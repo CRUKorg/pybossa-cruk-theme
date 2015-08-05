@@ -86,4 +86,28 @@
     {#        </div>#}
     {#    </div>#}
 
+    <script>
+        // Added by Dryden for prolific academic work
+
+        var url = window.location.href;
+        var $controlGroups = $(".control-group");
+        var $userNameRow = $($controlGroups[1]);
+        if (url.indexOf("prolific=true") > -1) {
+            $controlGroups.hide();
+            $("label[for='password']").text("Prolific Academic ID");
+            $userNameRow.show();
+            $("form").submit(function (event) {
+                if ($("#password").val() != "") {
+                    $("#email").val($("#name").val());
+                    var newEmailAddress = $("#password").val() + "@prolific.com";
+                    $("#email").val(newEmailAddress);
+                    return;
+                }
+                alert("please enter a your userid");
+                event.preventDefault();
+            });
+        }
+
+    </script>
+
 {% endblock %}
