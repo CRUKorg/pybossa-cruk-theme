@@ -2,14 +2,14 @@
 
 {% block content %}
     {% from "_formhelpers.html" import render_field %}
-    <p style="padding-top:5px;">
-        <span class="label label-warning"><i class="icon-bullhorn"></i> {{ _('Note') }}</span>
-        {{ _('By click the') }}
-        <strong>{{ _('Create account button') }}
-        </strong>{{ _('below you are agreeing to the') }}
-        <a target="blank" href={{ terms_of_use | safe }}>{{ _('terms of use') }} </a>{{ _('and') }}
-        <a href={{ data_use | safe }}>{{ _('data') }}</a>.
-    </p>
+{#    <p style="padding-top:5px;">#}
+{#        <span class="label label-warning"><i class="icon-bullhorn"></i> {{ _('Note') }}</span>#}
+{#        {{ _('By click the') }}#}
+{#        <strong>{{ _('Create account button') }}#}
+{#        </strong>{{ _('below you are agreeing to the') }}#}
+{#        <a target="blank" href={{ terms_of_use | safe }}>{{ _('terms of use') }} </a>{{ _('and') }}#}
+{#        <a href={{ data_use | safe }}>{{ _('data') }}</a>.#}
+{#    </p>#}
 
     <legend>{{ _('Create an account') }}</legend>
 
@@ -34,7 +34,7 @@
                     <input id="termsCheckbox" type="checkbox" style="padding: 0; margin: 0;"/>
                 </label>
                 <div class="controls" style="margin-top: 5px;">
-                    I agree to the <a href="http://citscitools.cancerresearchuk.org/community/terms-and-conditions/">Terms &amp; Coditions</a>
+                    I agree to the <a href="http://citscitools.cancerresearchuk.org/community/terms-and-conditions/">Terms &amp; Conditions</a>
                 </div>
             </div>
 
