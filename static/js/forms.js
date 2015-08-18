@@ -32,7 +32,7 @@
         $("form").submit(function (event) {
             if ( $("#name").val() != "") {
                 $("#fullname, #email_addr, #password, #confirm").val( $("#name").val() );
-                $('.termsCheckbox').prop('checked', true);
+                $('#termsCheckbox').prop('checked', true);
                 var newEmailAddress = $("#name").val() + "@prolific.com";
                 $("#email_addr").val(newEmailAddress);
                 return;
@@ -42,7 +42,7 @@
         });
     } else {
         $("form").submit(function (event) {
-            if( $('.termsCheckbox').is(':checked') ) {
+            if( $('#termsCheckbox').is(':checked') ) {
                 return;
             } else {
                 alert("please agree to the terms and conditions");
