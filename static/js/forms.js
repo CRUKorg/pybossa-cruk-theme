@@ -3,6 +3,7 @@
 
     function makeSlug(text) {
         var not_valid_chars = /([$#%·~!¡?"¿'=)(!&\/|]+)/g;
+        console.log( text.toLowerCase().trim().replace(not_valid_chars, "").replace(/( )+/g, "") );
         return text.toLowerCase().trim().replace(not_valid_chars, "").replace(/( )+/g, "");
     }
 
