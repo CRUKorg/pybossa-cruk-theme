@@ -5076,9 +5076,11 @@ h6 [class^="icon-"] {
 }
 #cookies_warning p {
   padding-left: 20px;
+  display: inline-block;
 }
-#cookies_warning p .cookies_warning-buttons {
+#cookies_warning .cookies_warning-buttons {
   margin-left: 10px;
+  display: inline-block;
 }
 /* Tutorial */
 .zoomContainer {
