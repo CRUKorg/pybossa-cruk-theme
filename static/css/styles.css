@@ -5066,6 +5066,12 @@ h6 [class^="icon-"] {
   content: " ";
   display: table;
 }
+/* Cookie Notice */
+#cookies_warning {
+  position: fixed;
+  bottom: 0;
+  padding-left: 20px;
+}
 /* Tutorial */
 .zoomContainer {
   z-index: 2000 !important;
