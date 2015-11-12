@@ -76,12 +76,14 @@
             {% if show_cookies_warning %}
             <div id="cookies_warning">
                 <p>Cookies help us deliver our services. By using our services, you agree to our use of cookies.
-                    <button class="btn btn-mini btn-success" onclick="accept_cookies()">
-                    <i class="icon-thumbs-up"></i> OK</button>
-                    <a class="btn btn-mini" href="http://www.cancerresearchuk.org/terms-and-conditions/cookies-policy">
-                    <i class="icon-info-sign"></i>
-                        More info
-                    </a>
+                    <div class="cookies_warning-buttons">
+                        <button class="btn btn-mini btn-success" onclick="accept_cookies()">
+                        <i class="icon-thumbs-up"></i> OK</button>
+                        <a class="btn btn-mini" href="http://www.cancerresearchuk.org/terms-and-conditions/cookies-policy">
+                        <i class="icon-info-sign"></i>
+                            More info
+                        </a>
+                    </div>
                 </p>
             </div>
             {% endif %}
