@@ -5084,7 +5084,7 @@ h6 [class^="icon-"] {
 }
 /* Tutorial */
 .zoomContainer {
-  z-index: 2000 !important;
+  z-index: 2000;
 }
 .modal {
   margin-left: -400px;
