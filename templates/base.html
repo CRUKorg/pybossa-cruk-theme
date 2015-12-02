@@ -18,6 +18,7 @@
         <link href="{{ url_for('static', filename='css/slick.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/slick-theme.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/nouislider.css') }}" rel="stylesheet">
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -31,6 +32,7 @@
         <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/2.2.1/js/bootstrap.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='vendor/modernizr.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/vendor/nouislider.min.js') }}"></script>
 
         <script src="{{ url_for('static', filename='js/vendor/jquery.elevateZoom.min.js') }}" type="text/javascript"></script>
         <script src="{{ url_for('static', filename='js/vendor/raphael-min.js') }}" type="text/javascript"></script>
@@ -67,12 +69,25 @@
             {% block content %}{% endblock %}
 
         </div>
+
+
+{#    {% include "_footer.html" %}#}
+
+
         <!-- /container -->
-        {#    {% if show_cookies_warning %}#}
-        {#    <div id="cookies_warning">#}
-        {#        <p>Cookies help us deliver our services. By using our services, you agree to our use of cookies. <button class="btn btn-mini btn-success" onclick="accept_cookies()"><i class="icon-thumbs-up"></i> OK</button> <a class="btn btn-mini" href="{{url_for('help.cookies_policy')}}"><i class="icon-info-sign"></i> More info</a></p>#}
-        {#    </div>#}
-        {#    {% endif %}#}
+            {% if show_cookies_warning %}
+            <div id="cookies_warning">
+                <p>Cookies help us deliver our services. By using our services, you agree to our use of cookies.</p>
+                    <div class="cookies_warning-buttons">
+                        <button class="btn btn-mini btn-success" onclick="accept_cookies()">
+                        <i class="icon-thumbs-up"></i> OK</button>
+                        <a class="btn btn-mini" href="http://www.cancerresearchuk.org/terms-and-conditions/cookies-policy">
+                        <i class="icon-info-sign"></i>
+                            More info
+                        </a>
+                    </div>
+            </div>
+            {% endif %}
         <footer>
             {% if not enforce_privacy %}
                 <div id="footer_links" class="container">
