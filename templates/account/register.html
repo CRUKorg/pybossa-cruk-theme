@@ -12,7 +12,7 @@
 </p>
 
   <legend>{{ _('Create an account') }}</legend>
-  <form method="post" class="form-horizontal" action="{{ url_for('account.register') }}">
+  <form method="post" class="form-horizontal" action="{{ url_for('account.register') }}?{{ request.query_string }}">
       {{ form.hidden_tag() }}
       <input type="hidden" name='raw_query_string' value="{{ request.query_string }}"/>
 
